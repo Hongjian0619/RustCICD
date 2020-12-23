@@ -17,5 +17,6 @@ async fn main() -> tide::Result<()> {
 
 async fn order_shoes(mut req: Request<()>) -> tide::Result {
     let Animal { name, legs } = req.body_json().await?;
+    println!("test github action");
     Ok(format!("Hello, {}! I've put in an order for {} shoes", name, legs).into())
 }
